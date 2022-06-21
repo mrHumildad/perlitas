@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(22, 9, 33);
+    color: aliceblue;
+    text-align: center;
+}
+
+.logo {
+    padding: 20px;
+    width: 80%;
+    position: relative;
+    align-content: center;
+}
+
+h1 {
+    display: block;
+}
+
+.corto {
+    background-color: aliceblue;
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 10px solid brown;
+    padding: 20px;
+}
+
+.container {
+    background-color: blueviolet;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#pandemia {
+    background-image: url("pand.png");
+    background-size: cover;
+    margin: 0 auto;
+}
