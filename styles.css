@@ -1,7 +1,14 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("perma.woff")
+  }
+
 body {
     background-color: rgb(22, 9, 33);
     color: aliceblue;
     text-align: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .logo {
@@ -11,33 +18,73 @@ body {
     align-content: center;
 }
 
-h1 {
-    display: block;
+#logo2 {
+    width: 30%;
+    position: relative;
+    align-content: center;
 }
 
-.corto {
-    background-color: aliceblue;
-    width: 300px;
-    height: 300px;
-    border-radius: 20%;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: 10px solid brown;
-    padding: 20px;
+.descripcion {
+    color: rgb(46, 165, 42);
+    
 }
 
 .container {
-    background-color: blueviolet;
     display: flex;
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
 }
 
-#pandemia {
+#pandemia1 {
     background-image: url("pand.png");
     background-size: cover;
-    margin: 0 auto;
+    
+}
+
+.cover {
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    margin: auto;
+    
+    margin: 10px;
+    gap: 20px;
+    border: 10px solid #db0909;
+    text-decoration: none;
+    font-size: 60px;
+    text-align: center;
+    color: #db0909;
+    text-shadow:    -1px 1px 0 #000,
+                    1px 1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px -1px 0 #000;      
+}
+
+#pandemia { background-image:url("pand.png") ;}
+#covid {background-image: url("covid.png");}
+#culpa {background-image: url("culpa.png");}
+#bikini {background-image: url("bikini.png");}
+#caracol {background-image: url("caracol.png");}
+#vida {background-image: url("vida.png");}
+#huracan {background-image: url("huracan.png");}
+#mk {background-image: url("mk.png");}
+#selfie {background-image: url("selfie.png");}
+
+.titulo {
+    display: none;
+    line-height: 10%;
+}
+
+.cover:hover {
+    border: 10px solid rgb(46, 165, 42);
+
+}
+
+.cover:hover .titulo{
+    display: contents;
+
 }
