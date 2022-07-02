@@ -2,69 +2,85 @@
     font-family: myFirstFont;
     src: url("perma.woff")
   }
-
 body {
     background-color: rgb(22, 9, 33);
-    color: aliceblue;
     text-align: center;
     align-items: center;
     font-family: 'Permanent Marker', cursive;
+    display: flexbox;
+    justify-items: center;
+    align-content: center;
 }
-
+h1 {
+    color: rgb(46, 165, 42);
+    font-size: 32;
+}
 .logo {
     padding: 20px;
     width: 80%;
     position: relative;
     align-content: center;
 }
-
 #logo2 {
     width: 30%;
     position: relative;
     align-content: center;
 }
-
 .descripcion {
-    color: rgb(46, 165, 42);
-    
+    color: #db0909;
+    line-height: 10px;
+    font-size: 22px;
 }
-
 .container {
     display: flex;
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-
+    justify-content: space-around;
+    /*background-color: #db0909;*/
+    text-align: center;
 }
-
-#pandemia1 {
-    background-image: url("pand.png");
-    background-size: cover;
-    
-}
-
 .cover {
     display: block;
     width: 300px;
     height: 300px;
     border-radius: 20%;
-    margin: auto;
-    
-    margin: 10px;
-    gap: 20px;
-    border: 10px solid #db0909;
+    margin: 10 10;
+    position: relative;
+    margin: 10px 10px;
+    gap: 20px 20px;
+    border: 10px solid rgb(46, 165, 42);
     text-decoration: none;
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+}
+
+.titulo {
+    opacity: 0;
+    line-height: 50px;
+    vertical-align: middle;
     font-size: 60px;
     text-align: center;
     color: #db0909;
-    text-shadow:    -1px 1px 0 #000,
-                    1px 1px 0 #000,
-                    1px -1px 0 #000,
-                    -1px -1px 0 #000;      
+    
+    
 }
 
-#pandemia { background-image:url("pand.png") ;}
+.info {
+    opacity: 0;
+    font-size: 0;
+    line-height: 0px;
+    color:#db0909;
+    text-shadow: none;
+    background-color: #db0909;
+    border-radius: 10%;  
+    position: absolute;
+    bottom: -15px;
+    
+}
+
+#pandemia { background-image:url("pand.png");}
 #covid {background-image: url("covid.png");}
 #culpa {background-image: url("culpa.png");}
 #bikini {background-image: url("bikini.png");}
@@ -74,17 +90,72 @@ body {
 #mk {background-image: url("mk.png");}
 #selfie {background-image: url("selfie.png");}
 
-.titulo {
-    display: none;
-    line-height: 10%;
+.cover:hover {
+    animation-name: ANim_borde;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
 }
 
-.cover:hover {
-    border: 10px solid rgb(46, 165, 42);
+@keyframes ANim_borde {
+    0% {
+        border: 10px solid rgb(46, 165, 42);
 
+    }
+    100% {
+        border: 10px solid #db0909;
+    }
 }
 
 .cover:hover .titulo{
-    display: contents;
+    animation-name: ANim_titulo;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 
 }
+
+.cover:hover .info{
+    animation-name: ANim_info;
+    animation-delay: 0.1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+@media (hover: none) {
+    /* ... */
+}
+
+@keyframes ANim_titulo {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 50 rgb(22, 9, 33),
+                     0px 0px 50 rgb(22, 9, 33),
+                     0px -0px 50 rgb(22, 9, 33),
+                    0px 0px 50 rgb(22, 9, 33); 
+        
+    }
+    100% {
+        opacity: 1;
+        text-shadow: -5px 5px 0 rgb(22, 9, 33),
+                     5px 5px 0 rgb(22, 9, 33),
+                     3px -3px 0 rgb(22, 9, 33),
+                    -3px -3px 0 rgb(22, 9, 33); 
+        
+    }
+}
+
+@keyframes ANim_info {
+    0% {
+        opacity: 0;
+        font-size: 0;
+        line-height: 0px;
+        color:#db0909;
+    }
+    100% {
+        opacity: 1;
+        font-size: 20;
+        line-height: 22px;
+        color: rgb(22, 9, 33);
+    }
+}
+
