@@ -31,7 +31,7 @@ h1 {
     line-height: 10px;
     font-size: 22px;
 }
-.container {
+#container {
     display: flex;
     margin: 0 auto;
     flex-direction: row;
@@ -40,6 +40,7 @@ h1 {
     /*background-color: #db0909;*/
     text-align: center;
 }
+
 .cover {
     display: block;
     width: 300px;
