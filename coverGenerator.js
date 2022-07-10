@@ -1,6 +1,15 @@
-/* import { peliculas } from "./peliculasData"
- */
 const container = document.getElementsByClassName("container")
+let nombres = ["Santi Sosa", "Max Bridas"]
+const santiMax1 = document.getElementById("santiMax1")
+const santiMax2 = document.getElementById("santiMax2")
+let orden = Math.round(Math.random())
+let primero = nombres[orden]
+nombres.splice(orden, 1)
+let segundo = nombres[0]
+let one = document.createTextNode(primero)
+let two = document.createTextNode(segundo)
+santiMax1.appendChild(one)
+santiMax2.appendChild(two)
 const createNewCover = (pelicula)=> {
     let newCover = document.createElement("a")
     let newTitulo = document.createElement("h3")
@@ -21,7 +30,6 @@ const createNewCover = (pelicula)=> {
     return newCover
 }
 let frag = new DocumentFragment
-console.log(peliculas.length)
 const shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -37,29 +45,3 @@ for (let i = 0; i < peliculas.length; i++) {
     frag.appendChild(c)
 }
 container[0].append(frag)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* cover1 = createNewCover("speriamo", "santi ossa", 2023)
-console.log(cover1) */
-
-
-

@@ -19,8 +19,11 @@ h1 {
 }
 .descripcion {
     color: #db0909;
-    line-height: 10px;
+    line-height: 20px;
     font-size: 22px;
+}
+.santiMax {
+    font-size: 28px;
 }
 .container {
     display: flex;
