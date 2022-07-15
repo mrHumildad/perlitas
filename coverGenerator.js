@@ -1,5 +1,6 @@
 const container = document.getElementsByClassName("container")
 let nombres = ["Santi Sosa", "Max Bridas"]
+let linksautores = [""]
 const santiMax1 = document.getElementById("santiMax1")
 const santiMax2 = document.getElementById("santiMax2")
 let orden = Math.round(Math.random())

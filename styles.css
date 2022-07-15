@@ -62,7 +62,7 @@ h1 {
 }
 @keyframes ANim_borde {
     0% {border: 10px solid rgb(46, 165, 42);}
-    100% {border: 10px solid #db0909;
+    100% {border: 10px solid #db0909;  /*dc0000*/
         border-radius: 30%;
     }
 }
