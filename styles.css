@@ -53,10 +53,13 @@ h1 {
     animation-name: ANim_borde;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 @keyframes ANim_borde {
     0% {border: 10px solid rgb(46, 165, 42);}
-    100% {border: 10px solid #db0909;}
+    100% {border: 10px solid #db0909;
+        border-radius: 30%;
+    }
 }
 .titulo {
     opacity: 0;
@@ -70,7 +73,7 @@ h1 {
     animation-name: ANim_titulo;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
 
 }
 @keyframes ANim_titulo {
@@ -109,7 +112,7 @@ h1 {
  animation-name: ANim_info;
  animation-duration: 0.5s;
  animation-fill-mode: forwards;
- animation-timing-function: ease-in;
+ animation-timing-function: ease-in-out;
 }
 @keyframes ANim_info {
     0% {
@@ -127,4 +130,51 @@ h1 {
     width: 30%;
     position: relative;
     align-content: center;
+}
+
+@media screen and (pointer: coarse), (pointer: none), (hoover: none) {
+    .cover {
+        animation-name: ANim_borde;
+        animation-duration: 6s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+    }
+    .titulo {
+        opacity: 1;
+        animation-name: ANim_titulo_mobile;
+        animation-duration: 3s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        text-shadow: -5px 5px 0 rgb(22, 9, 33),
+                         5px 5px 0 rgb(22, 9, 33),
+                         3px -3px 0 rgb(22, 9, 33),
+                        -3px -3px 0 rgb(22, 9, 33); 
+    }
+    .info {
+        transform: scaleY(1);
+        animation-name: ANim_info_mobile;
+        animation-duration: 6s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes ANim_info_mobile {
+        0% {background-color:rgb(46, 165, 42);}
+        100% {background-color:#db0909; }
+    }
+    @keyframes ANim_titulo_mobile {
+        0% {transform: scale(0.8);
+
+        }
+        100% {transform: scale(1);  
+ 
+        }
+    }
+    
 }
