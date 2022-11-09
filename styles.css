@@ -44,10 +44,10 @@ h1 {
     width: 300px;
     height: 300px;
     border-radius: 20%;
-    margin: 10 10;
+/*     margin: 10 10; */
     position: relative;
     margin: 10px 10px;
-    gap: 20px 20px;
+    gap: 20px 30px;
     border: 10px solid rgb(46, 165, 42);
     text-decoration: none;
     display: flex;

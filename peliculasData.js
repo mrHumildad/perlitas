@@ -61,5 +61,12 @@ let peliculas = [
                     img :       "img/selfie.png",
                     link:       "https://www.youtube.com/watch?v=sA7Cq4LuZeM", 
                     tipo :      "cortometraje"
+                },
+    sushi=     {   titulo :    "Sushi Lovers",
+                    autor :     "Santi Sosa", 
+                    ano :       2022, 
+                    img :       "img/sushi.png",
+                    link:       "https://www.youtube.com/watch?v=2ssa1K5zNrM", 
+                    tipo :      "cortometraje"
                 }
             ]
